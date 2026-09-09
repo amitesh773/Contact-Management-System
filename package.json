@@ -1,0 +1,36 @@
+{
+  "name": "contact-management-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "-": "^0.0.1-security.1",
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.5.0",
+    "@types/sequelize": "^4.28.20",
+    "bcrypt": "^6.0.0",
+    "D": "^1.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.4",
+    "npx": "^10.2.2",
+    "sequelize": "^6.37.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "tsx": "^4.23.13"
+  }
+}
