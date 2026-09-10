@@ -7,6 +7,8 @@ import { credentials } from "./config/credentials.js";
 import { dbConnection } from "./config/dbConnection.js";
 dbConnection()
 import "./models/user.js"
+import "./models/contact.js"
+
 
 import auth from "./modules/routers/userRouter.js"
 app.use("/auth", auth)
