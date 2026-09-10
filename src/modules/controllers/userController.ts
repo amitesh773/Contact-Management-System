@@ -41,8 +41,6 @@ export const singup = async (req: Request, res: Response )=>{
       })
     }
 
-    const {error} = 
-
     const existingEmail = await User.findOne({
       where: {
         email
