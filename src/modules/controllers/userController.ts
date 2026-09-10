@@ -4,10 +4,20 @@ import User from "../../models/user.js";
 import bcrypt from "bcrypt"
 import { credentials } from "../../config/credentials.js";
 import JWT from "jsonwebtoken";
+import { authValidation } from "../../validation/authValidation.js";
 
 
 export const singup = async (req: Request, res: Response )=>{
   try {
+    const {error : validationError} = await authValidation.validate(req.body)
+
+    if(validationError){
+      return res.status(401).json({
+        message: validationError.details[0]?.message
+      })
+
+    }
+
     const {name, email, phone, password } = req.body;
 
     if(!name){
@@ -30,6 +40,8 @@ export const singup = async (req: Request, res: Response )=>{
         message: "Passowrd is required"
       })
     }
+
+    const {error} = 
 
     const existingEmail = await User.findOne({
       where: {

@@ -11,7 +11,10 @@ import "./models/contact.js"
 
 
 import auth from "./modules/routers/userRouter.js"
+import contacts from "./modules/routers/contactRouter.js"
+
 app.use("/auth", auth)
+app.use("/contact",contacts)
 
 app.listen(credentials.PORT,()=>{
       console.log(`server is runng on port ${credentials.PORT}`)
